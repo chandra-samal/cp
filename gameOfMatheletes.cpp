@@ -6,6 +6,7 @@ int main(){
     int t;
     cin >> t;
     while (t--){
+
         int n, k;
         int score=0;
         cin >> n >> k;
@@ -13,7 +14,10 @@ int main(){
         for (int i = 0; i<n; i++){
             cin >> nums[i];
         }
+
+        // My strategy involves sorting the array, and then using two pointers for comparision with k and then implementing the score accordingly
         sort(nums.begin(), nums.end());
+
         // using two pointers p and q
         int p = 0, q = n-1;
         while ((p!=n-1)&&(q>p)){
